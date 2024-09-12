@@ -38,8 +38,27 @@ function checkDigitsInName(name){
 
 
 function calculateFinalScore(obj){
-    
+    if(typeof obj != 'object'){
+        return 'Invalid Input';
     }
+    else{
+        if(obj.isFFamily == true){
+            obj.isFFamily = 20;
+        }
+        else {
+            obj.isFFamily = 0;
+        }
+        let finalScore = obj.testScore + obj.schoolGrade + obj.isFFamily;
+        
+        if(finalScore >= 80){
+            return true;
+        }
+        else {return false;}
+    }
+    
+}
+
+
 
 
 function waitingTime(waitingTimes ,serialNumber){
