@@ -25,11 +25,15 @@ function sendNotification(email){
 }
 
 
-
-
 function checkDigitsInName(name){
-    
+    if(typeof name != 'string'){
+        return 'Invalid Input';
     }
+    else{
+        const regex = /\d/;
+        return regex.test(name);
+    }
+}
 
 
 
