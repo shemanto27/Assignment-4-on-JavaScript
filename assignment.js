@@ -1,27 +1,35 @@
-/*functionsignature/sample*/
-functioncalculateTax(income,expenses){
-    //Youhavetowriteyourcodehere
+
+function calculateTax(income,expenses){
+    if((income <= 0 || expenses <=0) || (expenses > income)){
+        return ('Invalid Input');
     }
-   
-
- /*functionsignature/sample*/
- functionsendNoti cation(email){
-    //Youhavetowriteyourcodehere
-    }
-
-
-/*functionsignature/sample*/
-functioncheckDigitsInName(name){
-    //writeyourcodehere
+    else{
+        tax = (income - expenses) * 0.2;
+        return tax;
     }
 
+}
 
-/*functionsignature/sample*/
-functioncalculateFinalScore(obj){
-    //writeyourcodehere
+
+
+
+function sendNotication(email){
+    
     }
 
-/*functionsignature/sample*/
-functionwaitingTime(waitingTimes ,serialNumber){
-    //Youhavetowriteyourcodehere
+
+
+function checkDigitsInName(name){
+    
+    }
+
+
+
+function calculateFinalScore(obj){
+    
+    }
+
+
+function waitingTime(waitingTimes ,serialNumber){
+    
     }
