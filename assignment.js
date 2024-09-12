@@ -1,10 +1,10 @@
 
 function calculateTax(income,expenses){
     if((income <= 0 || expenses <=0) || (expenses > income)){
-        return ('Invalid Input');
+        return 'Invalid Input';
     }
     else{
-        tax = (income - expenses) * 0.2;
+        let tax = (income - expenses) * 0.2;
         return tax;
     }
 
@@ -13,9 +13,17 @@ function calculateTax(income,expenses){
 
 
 
-function sendNotication(email){
-    
+function sendNotification(email){
+    if(email.indexOf('@') == -1){
+    return 'Invalid Email';
+}
+    else{
+        x = email.split('@');
+        let notification = `${x[0]} sent you an email from ${x[1]}`;
+        return notification;
     }
+}
+
 
 
 
