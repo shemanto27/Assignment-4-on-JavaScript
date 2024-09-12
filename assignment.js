@@ -62,5 +62,19 @@ function calculateFinalScore(obj){
 
 
 function waitingTime(waitingTimes ,serialNumber){
-    
+    if((typeof waitingTimes != 'object') || (typeof serialNumber != 'number')){
+        return 'Invalid Input';
     }
+    else{
+        let sum = 0;
+        for (let time of waitingTimes){
+            sum += time;         
+        }
+        let average = Math.round(sum/waitingTimes.length);
+        let done = waitingTimes.length;
+        let beforeHer = serialNumber - 1;
+        let remaining = beforeHer - done;
+        let timeNeeded = remaining * average;
+        return timeNeeded;
+    }
+}
